@@ -117,8 +117,8 @@ Já sabemos que para que uma classe seja coesa e reutilizável, ela não deve po
 </p><p>
 No Python podemos fazer herança múltipla, então resolvi abstrair uma classe para calcular o volume de um polígono baseado em seu número de lados, uma para calcular a área também baseado em seu número de lados. Assim, eu conseguiria reutilizá-las para outros polígonos com quantidades de lados diferentes:
 </p>
-````python
 
+```python
 class CalculaPerimetro:
     def __init__(self, numero_lados=0):
         self.numero_lados = numero_lados
@@ -144,7 +144,6 @@ class Quadrado(CalculaArea, CalculaVolume):
     @property
     def volume(self):
         return self.calcula_volume()
-
 ```
 <p>Perceba que na classe Quadrado, herdei e criei propriedades somente para área e volume. Não utilizei a classe CalculaPerimetro pois eu decidi que agora eu não iria usá-la, não tinha porque implementar uma nova propriedade(interface) para a minha classe Quadrado.</p>
 <p>
